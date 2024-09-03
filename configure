@@ -389,7 +389,9 @@ fi
 # executable stack, potentially exposing vulnerabilities in programs
 # linked with such object files. Fix this.
 #
+if ! test "$cc_family" = clang ; then
 tryflag CFLAGS_C99FSE -Wa,--noexecstack
+fi
 
 #
 # Check for options to disable stack protector, which needs to be
