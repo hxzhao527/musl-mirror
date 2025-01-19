@@ -229,7 +229,7 @@ musl-%.tar.gz: .git
 endif
 
 clean:
-	rm -rf obj lib
+	rm -rf obj lib .cache compile_commands.json
 
 distclean: clean
 	rm -f config.mak
